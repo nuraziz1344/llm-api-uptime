@@ -1,0 +1,14 @@
+services:
+  llm-uptime:
+    build: .
+    container_name: llm-api-uptime
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    environment:
+      - PORT=8080
+      - DATA_DIR=/data
+      # Optional: set a persistent secret key, otherwise auto-generated in /data/.secret.key
+      # - APP_ENCRYPTION_KEY=change-me-to-a-strong-random-string
+    restart: unless-stopped

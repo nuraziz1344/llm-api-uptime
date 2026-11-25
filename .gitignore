@@ -1,0 +1,26 @@
+# Runtime data & secrets
+data/
+*.db
+*.db-shm
+*.db-wal
+.secret.key
+.env
+.env.*
+
+# Build outputs
+bin/
+dist/
+internal/webui/dist/*
+!internal/webui/dist/index.html
+
+# Frontend dependencies & build
+web/node_modules/
+web/dist/
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.log
